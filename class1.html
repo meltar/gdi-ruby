@@ -270,6 +270,7 @@
   "melissa".capitalize
   "Hello".reverse
   "Melissa".length
+  "Melissa"[1]
   "Melissa Holmes".swapcase
   "".empty?
   </code></pre>
@@ -309,7 +310,7 @@
   </code></pre>
   <p>How many seconds are in an hour?</p>
   <p>How many minutes are in a week?</p>
-  <p>How many years old are you if you've been alive 1 million seconds?</p>
+  <p>How many years old are you if you've been alive 175,200 hours?</p>
 </section>
 <section>
   <h3>Symbols</h3>
@@ -317,10 +318,10 @@
   <p class="fragment">It's good to know these exist, but don't worry about them too much for now.</p>
   <pre><code contenteditable class="ruby fragment">
   # transient and mutable
-  "hello"
+  "red"
 
   # permanent and immutable
-  :hello
+  :red
   </code></pre>
 </section>
 <section>
@@ -363,8 +364,8 @@
   # Hashes are like dictionaries. You can look up a value by a key.
   irb> hash_of_key_to_value =
     {
-      "Apple" => "A fruit.",
-      "Cucumber" => "A vegetable."
+      "apple" => "A fruit.",
+      "carrot" => "A vegetable."
     }
   </code></pre>
 </section>
@@ -436,7 +437,7 @@
     <li>Write your own program using 'puts' and 'gets' to ask a user for their age and then tell them how old they are in dog years.</li>
     <li>reminder: 'gets' method returns a string. To do math on it, convert it to an integer with .to_i method.</li>
     <pre><code class="ruby">
-    #1 dog year = 7 human years
+    # 1 dog year = 7 human years
     user_age = gets.to_i
     </code></pre>
   </ul>
