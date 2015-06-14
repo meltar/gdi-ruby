@@ -533,7 +533,7 @@ arr.first       # returns the first element
             </section>
 
             <section>
-                <h3>Adding & Deleting From Arrays</h3>
+                <h3>Adding and Deleting From Arrays</h3>
                 <p>Adding and removing items to an array can be done in a variety of ways. These are the most common.</p>
                 <pre><code  class="ruby">
 arr = ["wow", "woooo", "zowie"]
@@ -555,7 +555,7 @@ arr.pop                 # removes and returns the last element
                 <pre><code  class="ruby">
 arr = ["dog", "cat", "turtle", "parakeet", "ferret"]
 
-arr.index("dog")  # returns the index of the element that matches argument
+arr.index("dog")  # returns the index of the element that matches
 arr.join          # returns a string made up of all the elements
 arr.clear         # removes all elements from the array
 arr.reverse       # returns new array with same elements, reversed
@@ -590,19 +590,19 @@ new_hash.has_value?(35)
             <section>
             <h3>Accessing Elements in Hashes</h3>
             <p>Hashes are <strong>unordered.</strong> Hashes are like dictionaries, with unique <strong>key / value</strong> pairs.</p>
-            <p>Because hashes can have any type of object as an idex, and are unordered, we must access values by their <strong>key</strong>.</p>
+            <p>Because hashes can have any type of object as an index, and are unordered, we must access values by their <strong>key</strong>.</p>
             <pre><code  class="ruby">
 grades_hash = { "Jane Doe" => 10, "Jim Doe" => 6, "Jan Doe" => 8}
 new_hash = { 1 => "a", "d" => 12, "f" => 35 }
 
 grades_hash["Jane Doe"]   # returns 10, the value of this key
 new_hash["d"]             # returns 12, the value of this key
-grades_hash.first         # returns first key/value pair... probably
+grades_hash.first         # returns a key/value pair
             </code></pre>
             </section>
 
             <section>
-            <h3>Adding & Removing from Hashes</h3>
+            <h3>Adding and Removing from Hashes</h3>
             <pre><code  class="ruby">
 new_hash = { 1 => "a", "d" => 12, "f" => 35 }
 
@@ -634,7 +634,7 @@ chapters.invert     # returns new hash with old one's values
 <!-- minutes --> 
             <section>
             <h3>Enumerable</h3>
-            <p><strong>Arrays</strong> and <strong>Hashes</strong> are both members of the <strong>Enumerable</strong> class. There are a lot of cool methods available for Enumerable, including <strong>each</strong>. </p>
+            <p><strong>Arrays</strong> and <strong>Hashes</strong> are both classes that have <strong>Enumerable</strong> methods. There are a lot of cool methods available for Enumerable, including <strong>each</strong>. </p>
 
             <!-- <p>Learn more about the methods available to Enumerable <a href="http://www.ruby-doc.org/core-2.1.1/Enumerable.html" alt="Ruby Docs">here</a>.</p> -->
             </section>
