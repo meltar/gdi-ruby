@@ -655,22 +655,22 @@ end
             <pre><code class="ruby">
 pets_array = ["dog", "cat", "turtle", "parakeet", "ferret"]
 
-pets_array.each do |p|
-  puts "I like #{p}s!!"
+pets_array.each do |pet|
+  puts "I like #{pet}s!!"
 end
 
 
 deep_array = [["mountain", "desert"], ["ocean", "sky"]]
 
-deep_array.each do |p| 
-  puts "I like #{p.first}s!!"  # each element is also an array
+deep_array.each do |array|
+  puts "I like #{array.first}s!!"  # each element is also an array
 end
             </code></pre>
             </section>
 
             <section>
             <h3>.each with Hashes</h3>
-            <p>Each element has a key and value that needs to be dealt with.</p>
+            <p>Each element has a key and value that needs to be used.</p>
             <pre><code class="ruby">
 grades_hash = { "Jane Doe" => 10, "Jim Doe" => 6, "Jan Doe" => 8}
 
@@ -687,6 +687,11 @@ end
             <p>Write a program that prints out every number between 1 and 1000 that is divisible by 7.</p>
             <br />
             <p>Hint: the modulo operator, %, will be helpful.</p>
+            <pre><code class="ruby">
+# try these expressions in IRB
+9 / 2
+9 % 2
+            </code></pre>
             </section>
 
 <!-- we found that there wasn't enough time in this class for this content, but it may be useful as homework or additional material for advanced students.
