@@ -212,6 +212,8 @@ end
 if x == 5
   puts 'x is equal to 5'
 end
+
+puts 'x is equal to 5' if x == 5
                 </code></pre>
                 </section>
                 <section>
@@ -239,12 +241,22 @@ end
 if x != 0 || y != 0
   puts 'The point x,y is not on the x or y axis'
 end
-
+            </code></pre>
+            </section>
+            <section>
+                <h3>Conditionals</h3>
+                <p>The following shows some examples of conditionals with more complex boolean expressions:</p>
+                <pre><code  class="ruby">
 # Not
-if not(x > y)
+if !(x > y)
   puts 'x is less than y'
 end
-                </code></pre>
+
+puts 'x is less than y' if !(x > y)
+
+puts 'x is less than y' unless x > y
+            </code></pre>
+            <p>The parentheses allow us to group expressions and negate them.</p>
             </section>
 
             <section>
@@ -259,7 +271,7 @@ if x > 10
 elsif x <= 10 && x > 0
   puts "x is a number between 1 and 10"
 else
-  puts "Wow, don't be so negative, dude"
+  puts "Wow, don't be so negative!"
 end
                 </code></pre>
             </section>
