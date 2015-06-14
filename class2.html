@@ -265,7 +265,7 @@ puts 'x is less than y' unless x > y
                 <p>Chained conditionals use <strong>elsif</strong> to test if additional statements are true. The single 'else' action will only happen if all preceding conditions are false.</p>
 
                 <p>For example:</p>
-                <pre><code  class="ruby">
+                <pre><code class="ruby">
 if x > 10
   puts "x is greater than 10"
 elsif x <= 10 && x > 0
@@ -280,16 +280,37 @@ end
     <!-- Let's develop it: 10 minutes  -->
             <section>
                 <h3>Let's Develop It</h3>
-                <p>Write a program in your text editor that uses conditionals and user input to allow the user to play an adventure game.</p>
-                <p>"gets.chomp" is the value of user input at the command line, with the trailing whitespace chomped off. To do math with it, convert it to an integer with the ".to_i" method</p>
+                <p>Make a file named adventure.rb.</p>
+                <pre><code class="ruby">
+# navigate to your hard drive
+cd ~/    # Linux, Mac
+cd C:\   # Windows
+
+# navigate into the code directory
+cd code
+
+# make and navigate into a new directory for this class
+mkdir gdi_class2
+cd gdi_class2
+
+# create a file
+touch adventure.rb
+             </code></pre>
+             <p>Run your program by calling it with Ruby from the command line.</p>
+             <pre><code>
+               $ ruby adventure.rb 
+            </code></pre>
+             
+            </section>
+
+
+            <section>
+                <h3>Let's Develop It</h3>
+                <p>Write a program in your text editor that uses conditionals and user input to allow the user to play a simple adventure game.</p>
+                <p>'gets.chomp' is the value of user input at the command line, with the trailing whitespace chomped off. To do math with it, convert it to an integer with the '.to_i' method</p>
                 <pre><code>
                   input = gets.chomp.to_i 
                 </code></pre>
-                <p>Run your program by calling it with Ruby from the command line.</p>
-                <pre><code>
-                  $ ruby program_name.rb 
-                </code></pre>
-            </section>
             <section>
             <h3>Let's Develop It Example</h3>
                <pre><code class="ruby">
