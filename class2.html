@@ -421,8 +421,8 @@ end
 
                 <p>First, we need a collection. Let's use a <strong>range</strong> of numbers to loop over.</p>
                 <pre><code  class="ruby">
-(0..5).each do |i|
-  puts "Value of i is #{i}"
+(0..5).each do |number|
+  puts "Value of number is #{number}"
 end
                 </code></pre>
                 
@@ -431,14 +431,14 @@ end
             <section>
                 <h3>Each loops</h3>
                 <pre><code  class="ruby">
-(0..5).each do |i|
-  puts "Value of i is #{i}"
+(0..5).each do |number|
+  puts "Value of number is #{number}"
 end
                 </code></pre>
                 <p>The loop has three parts:</p>
                 <ul>
                     <li>The collection that will be looped through, in this case a range- '(0..5)'</li>
-                    <li>The name to give each element when the loop begins again - 'i' - between the pipes | | </li>
+                    <li>The name to give each element when the loop begins again - 'number' - between the pipes | | </li>
                     <li>The code to execute with the element - puts line</li>
                 </ul>
                 <br>
@@ -489,8 +489,8 @@ letter_range = ('a'..'e') # contains 'a', 'b', 'c', 'd', 'e'
 (890..902).end
 (28..22).min
 
-('a'...'g').each do |l|
-  puts "#{l} is a pretty good letter"
+('a'...'g').each do |letter|
+  puts "#{letter} is a pretty good letter"
 end 
 
 (22..28).to_a
@@ -644,8 +644,8 @@ chapters.invert     # returns new hash with old one's values
             <h3>.each with Ranges</h3>
             <p>This is the simplest!</p>
             <pre><code class="ruby">
-(3..8).each do |n|
-  puts n * 4
+(3..8).each do |number|
+  puts number * 4
 end
             </code></pre>
             </section>
