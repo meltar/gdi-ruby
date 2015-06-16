@@ -46,7 +46,7 @@
           <p>How was last week's homework? Do you have any questions or concepts that you'd like to discuss?</p>
         </section>
 
-        <section>
+        <!-- <section>
           <h3>HW: grandma.rb</h3>
           <pre><code contenteditable class="ruby">
 chatting = true
@@ -71,8 +71,8 @@ end
 puts "Thanks for chatting with Grandma"
   </code></pre>
         </section>
-
-        <section>
+ -->
+        <!-- <section>
           <h3>HW: leap.rb</h3>
           <pre><code contenteditable class="ruby">
 puts "Enter a starting year in the format YYYY"
@@ -92,13 +92,13 @@ starting.upto(ending) do |year|
   end
 end
           </code></pre>
-        </section>
+        </section> -->
 
         <section>
           <h3>Review</h3>
           <ul>
             <li class="fragment">Conditions - if, elsif, else</li>
-            <li class="fragment">Loops - while, for</li>
+            <li class="fragment">Loops - while, each</li>
             <li class="fragment">Arrays - [1,2,3]</li>
             <li class="fragment">Hashes - {"one" => 1, "two" => 2}</li>
           </ul>
@@ -115,7 +115,7 @@ end
 
         <section>
           <h3>Methods</h3>
-          <p>A <strong>method</strong> is a name for a chunk of code</p>
+          <p>A <strong>method</strong> is a name for a chunk of code that goes together</p>
           <p class="fragment">Methods are often used to define reusable behavior.</p>
           <p class="fragment">Let's look at a method we've already used:</p>
           <pre><code contenteditable class="fragment ruby">
@@ -144,7 +144,7 @@ end
 
 -1.next
 => 0
-  </code></pre>
+          </code></pre>
         </section>
 
         <section>
@@ -159,7 +159,7 @@ end
 def subtract(x, y)
   x - y
 end
-        </code></pre>
+          </code></pre>
         </section>
 
         <section>
@@ -167,10 +167,10 @@ end
           <p>Let's write a method that takes in a number and tells us if it is even.</p>
           <p>Hint: if number % 2 == 0, then it is even</p>
           <pre><code contenteditable class="ruby">
-          def method_name(parameter)
-            # method implementation
-          end
-  </code></pre>
+def method_name(parameter)
+  # method implementation
+end
+          </code></pre>
         </section>
 
 
@@ -195,7 +195,7 @@ end
 
 return_value = subtract(5, 2)
 puts return_value
-  </code></pre>
+          </code></pre>
         </section>
 
         <section>
@@ -204,12 +204,12 @@ puts return_value
           <p>Note that the variable names don't have to match!</p>
           <p>In this code, 5 is an argument and x is a parameter</p>
           <pre><code contenteditable class="ruby">
-            def subtract(x,y)
-              x - y
-            end
+def subtract(x,y)
+  x - y
+end
 
-            subtract(5, 2)
-  </code></pre>
+subtract(5, 2)
+          </code></pre>
         </section>
 
         <section>
@@ -225,7 +225,7 @@ end
 Hello, Alice!
 Hello, Bob!
 Hello, Charlie!
-  </code></pre>
+          </code></pre>
         </section>
 
         <section>
@@ -240,7 +240,7 @@ Yum, chicken!
 
 >> eat "arugula"
 Yum, arugula!
-  </code></pre>
+          </code></pre>
         </section>
 
         <section>
@@ -253,7 +253,7 @@ def add_to_x_and_y(amount, vals)
 end
 
 add_to_x_and_y(2, {:x => 1, :y => 2})
-  </code></pre>
+          </code></pre>
         </section>
 
         <section>
@@ -269,7 +269,7 @@ end
 bake("Wheat")
 bake("Sourdough", :flour => "sour")
 bake("Pumpernickel", :creamer => "butter")
-  </code></pre>
+          </code></pre>
         </section>
 
         <section>
@@ -287,7 +287,7 @@ def different_message(some_string)
   puts our_string.center(length, "=")
 end
 # Error! 'our_string' and 'length' are not defined inside this method 
-  </code></pre>
+          </code></pre>
         </section>
 
         <section>
@@ -334,7 +334,7 @@ def array.delete
 end
 
 array.methods(false)
-        </code></pre>
+          </code></pre>
         </section>
 
         <section>
@@ -355,7 +355,7 @@ end
 
 cookie.add_chips(500)
 cookie.yummy?   #=> true
-        </code></pre>
+          </code></pre>
         </section>
 
         <section>
@@ -397,12 +397,12 @@ cookie.yummy?   #=> true
             same thing twice.
           </p>
           <pre><code contenteditable class="fragment ruby">
-    class MyString < String
-    end
+class MyString < String
+end
 
-    my_string = MyString.new
-    my_string.upcase
-  </code></pre>
+my_string = MyString.new
+my_string.upcase
+          </code></pre>
         </section>
 
         <section>
@@ -413,8 +413,8 @@ cookie.yummy?   #=> true
           <li>Within OOP, this relates to different objects being able to respond to the same message in different ways.</li>
             </ul>
           <pre><code contenteditable class="fragment ruby">
-    [1, "abc"].each {|object| puts object.next}
-  </code></pre>
+[1, "abc"].each {|object| puts object.next}
+          </code></pre>
         </section>
 
         <section>
