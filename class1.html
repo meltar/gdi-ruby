@@ -62,14 +62,6 @@
     <li class="fragment">Programming code is human readable but also needs a form that the computer can run directly.
       This form is not human readable.
     </li>
-    <!--<li class="fragment">To create the form of code the computer can use, we use the Ruby <a-->
-        <!--href="http://en.wikipedia.org/wiki/Interpreter_(computing)">interpreter</a>. Other languages use other-->
-      <!--interpreters or a <a href="http://en.wikipedia.org/wiki/Compiler">compiler</a>-->
-    <!--</li>-->
-    <!--<li class="fragment">Don't focus on what's "under the hood" for now. We will "drive the car" first.</li>-->
-    <!--<li class="fragment">In other words, there are many layers to the onion. We start at one layer and slowly move-->
-      <!--toward layers that are beneath or above us.-->
-    <!--</li>-->
   </ul>
 </section>
 <section>
@@ -78,17 +70,15 @@
     <li class="fragment">It reads like English. The syntax is intuitive.</li>
     <pre>
       <code contenteditable class="ruby fragment">
-  # Java
-  for(int i = 0; i < 5; i++)
+# Java
+for(int i = 0; i < 5; i++)
 
-  # Ruby
-  5.times do
+# Ruby
+5.times do
       </code>
     </pre>
     <li class="fragment">The community is large, active, and interested in helping others learn.</li>
     <li class="fragment">You can get a web app off the ground quickly.</li>
-    <!--<li class="fragment">You can make a lucrative career out of it.</li>-->
-    <!--<li class="fragment">Using Ruby will cost you $0.</li>-->
   </ul>
 </section>
 <section>
@@ -131,12 +121,12 @@
   <p>Try out some calculator functions</p>
   <pre>
     <code contenteditable class="ruby">
-  3 + 4
-  2 * 4
-  6 - 2
-  4 / 2
-  4 /* 2
-  => SyntaxError: (irb):10:syntax error, unexpected *
+3 + 4
+2 * 4
+6 - 2
+4 / 2
+4 /* 2
+=> SyntaxError: (irb):10:syntax error, unexpected *
     </code>
   </pre>
 </section>
@@ -152,8 +142,8 @@
   </ul>
   <pre>
     <code contenteditable class="ruby fragment">
-  irb> hi
-  NameError: undefined local variable or method `hi' for main:Object
+irb> hi
+NameError: undefined local variable or method `hi' for main:Object
     </code>
   </pre>
 </section>
@@ -166,12 +156,12 @@
     <li class="fragment">They are called variable because the information they reference may change.</li>
   </ul>
   <pre><code contenteditable class="ruby fragment">
-  # Everything after this pound sign will not be evaluated.
-  # These are called comments and I will use them to annotate code
-  age = 50
-  days_in_year = 365
-  days_alive = age * days_in_year
-  => 18250
+# Everything after this pound sign will not be evaluated.
+# These are called comments and I will use them to annotate code
+age = 50
+days_in_year = 365
+days_alive = age * days_in_year
+=> 18250
   </code></pre>
 </section>
 <section>
@@ -182,14 +172,14 @@
     <li class="fragment">Assign - Replace</li>
   </ul>
   <pre><code contenteditable class="ruby fragment">
-  # create and assign in one line
-  age = 0
+# create and assign in one line
+age = 0
 
-  # access the value in age
-  age
+# access the value in age
+age
 
-  # replace value in age
-  age = 40
+# replace value in age
+age = 40
   </code></pre>
 </section>
 <section>
@@ -201,13 +191,13 @@
     <li class="fragment">Should be unique</li>
   </ul>
   <pre><code contenteditable class="ruby fragment">
-  # good
-  occupation = "software engineer"
+# good
+occupation = "software engineer"
 
-  # bad
-  occupation_i_always_dreamed_of_having = "software engineer"
-  o = "software engineer"
-  1st_occupation = "software engineer"
+# bad
+occupation_i_always_dreamed_of_having = "software engineer"
+o = "software engineer"
+1st_occupation = "software engineer"
   </code></pre>
 </section>
 <section>
@@ -218,11 +208,11 @@
     <li class="fragment">Do not live forever</li>
   </ul>
   <pre><code contenteditable class="ruby fragment">
-  # error
-  name
+# error
+name
 
-  name = "Melissa"
-  defined?(name)
+name = "Melissa"
+defined?(name)
   </code></pre>
 </section>
 <!-- Data Types - 10 min -->
@@ -235,44 +225,44 @@
     <li class="fragment">Let's explore a few built in Objects</li>
   </ul>
   <pre><code contenteditable class="ruby fragment">
-  irb> 1.class
-  => Fixnum
-  irb> "Hello".class
-  => String
-  irb> 1.0022.class
-  => Float
-  irb> [1,2,3].class
-  => Array
+irb> 1.class
+=> Fixnum
+irb> "Hello".class
+=> String
+irb> 1.0022.class
+=> Float
+irb> [1,2,3].class
+=> Array
   </code></pre>
 </section>
 <section>
   <h3>Strings</h3>
   <p>Strings are characters inside double or single quotes.</p>
   <pre><code contenteditable class="ruby fragment">
-  a = 'Hello '
-  b = "World"
-  c = a + b
-  c.reverse
-  => "dlroW olleH"
+a = 'Hello '
+b = "World"
+c = a + b
+c.reverse
+=> "dlroW olleH"
   </code></pre>
   <pre><code contenteditable class="ruby fragment">
-  a = "Spam "
-  b = a * 4
-  # Here multiplying a by 4 concatenates (links) four strings together
-  =>"Spam Spam Spam Spam "
+a = "Spam "
+b = a * 4
+# Here multiplying a by 4 concatenates (links) four strings together
+=>"Spam Spam Spam Spam "
   </code></pre>
 </section>
 <section>
   <h3>String Practice</h3>
   <pre><code contenteditable class="ruby">
-  "Melissa".upcase
-  "Melissa".downcase
-  "melissa".capitalize
-  "Hello".reverse
-  "Melissa".length
-  "Melissa"[1]
-  "Melissa Holmes".swapcase
-  "".empty?
+"Melissa".upcase
+"Melissa".downcase
+"melissa".capitalize
+"Hello".reverse
+"Melissa".length
+"Melissa"[1]
+"Melissa Holmes".swapcase
+"".empty?
   </code></pre>
   <p>What is the reverse of your name?</p>
   <p>How many characters long is your name?</p>
@@ -285,28 +275,28 @@
   <p>Integers are either <strong>Fixnum</strong> or <strong>Bignum</strong>.</p>
   <p>They do not have decimals.</p>
   <pre><code contenteditable class="ruby fragment">
-    irb> 1_000_000_000_000_000_000.class
-     => Fixnum
-    irb> 1_000_000_000_000_000_000_000.class
-     => Bignum
+irb> 1_000_000_000_000_000_000.class
+ => Fixnum
+irb> 1_000_000_000_000_000_000_000.class
+ => Bignum
   </code></pre>
   <p>Floats are numbers with at least one number to the left of a decimal point.</p>
   <pre><code contenteditable class="ruby fragment">
-    irb> 1.001.class
-     => Float
+irb> 1.001.class
+=> Float
   </code></pre>
 </section>
 <section>
   <h3>Number Practice</h3>
   <pre><code contenteditable class="ruby">
-  7/8
-  7.0/8.0
-  3.14.to_s
-  3.14.to_i
-  1 + "2"
-  1 + "2".to_i
-  (1 + 2) * 3
-  1 + (2 * 3)
+7/8
+7.0/8.0
+3.14.to_s
+3.14.to_i
+1 + "2"
+1 + "2".to_i
+(1 + 2) * 3
+1 + (2 * 3)
   </code></pre>
   <p>How many seconds are in an hour?</p>
   <p>How many minutes are in a week?</p>
@@ -319,11 +309,11 @@
   <p class="fragment">You can think of symbols as lightweight Strings.</p>
   <p class="fragment">It's good to know these exist, but don't worry about them too much for now.</p>
   <pre><code contenteditable class="ruby fragment">
-  # transient and mutable
-  "red"
+# transient and mutable
+"red"
 
-  # permanent and immutable
-  :red
+# permanent and immutable
+:red
   </code></pre>
 </section>
 <section>
@@ -331,21 +321,21 @@
   <p class="fragment">This is another Object that we will learn about later.</p>
   <p class="fragment">For now, when you hear Boolean, think TRUE and FALSE.</p>
   <pre><code contenteditable class="ruby fragment">
-  # true
-  true
-  => true
+# true
+true
+=> true
 
-  # NOT true
-  !true
-  => false
+# NOT true
+!true
+=> false
 
-  # false
-  false
-  => false
+# false
+false
+=> false
 
-  # NOT false
-  !false
-  => true
+# NOT false
+!false
+=> true
   </code></pre>
 </section>
 <section>
@@ -353,22 +343,22 @@
   <p>We will also leave these data types for the next class</p>
   <p class="fragment">Examples of what they will look like:</p>
   <pre><code contenteditable class="ruby fragment">
-  # Arrays are used to hold sets of data.
-  irb> array_of_numbers = [1,2,3]
-  irb> array_of_numbers.first
-  => 1
+# Arrays are used to hold sets of data.
+irb> array_of_numbers = [1,2,3]
+irb> array_of_numbers.first
+=> 1
 
-  # Ranges are used to express a sequence.
-  irb> range_of_numbers = (1..5)
-  irb> range_of_numbers.include?(4)
-  => true
+# Ranges are used to express a sequence.
+irb> range_of_numbers = (1..5)
+irb> range_of_numbers.include?(4)
+=> true
 
-  # Hashes are like dictionaries. You can look up a value by a key.
-  irb> hash_of_key_to_value =
-    {
-      "apple" => "A fruit.",
-      "carrot" => "A vegetable."
-    }
+# Hashes are like dictionaries. You can look up a value by a key.
+irb> hash_of_key_to_value =
+  {
+    "apple" => "A fruit.",
+    "carrot" => "A vegetable."
+  }
   </code></pre>
 </section>
 <section>
@@ -381,15 +371,15 @@
   </ul>
   <pre>
     <code contenteditable class="ruby fragment">
-  irb> puts "hello"
-  hello
-  => nil
-  irb> "2".to_i
-  => 2
-  irb> 2.to_s
-  => "2"
-  irb> "2" / 5
-  NoMethodError: undefined method `/' for "2":String
+irb> puts "hello"
+hello
+=> nil
+irb> "2".to_i
+=> 2
+irb> 2.to_s
+=> "2"
+irb> "2" / 5
+NoMethodError: undefined method `/' for "2":String
     </code>
   </pre>
 </section>
@@ -404,33 +394,33 @@
   </br>
   <p class="fragment">Make a file called name.rb</p>
   <pre><code contenteditable class="fragment ruby">
-  # navigate to your hard drive
-  cd ~/    #Linux, Mac
-  cd C:\   #Windows
+# navigate to your hard drive
+cd ~/    #Linux, Mac
+cd C:\   #Windows
 
-  # navigate into the directory we made last week
-  cd code
+# navigate into the directory we made last week
+cd code
 
-  # make and navigate into a new directory for this class
-  mkdir gdi_class1
-  cd gdi_class1
+# make and navigate into a new directory for this class
+mkdir gdi_class1
+cd gdi_class1
 
-  # create a file
-  touch name.rb
+# create a file
+touch name.rb
   </code></pre>
 </section>
 <section>
   <h3>User Input</h3>
   <p class="fragment">Put the code below in your file called name.rb and save it</p>
   <pre><code contenteditable class="fragment ruby">
-  puts 'Hello there, and what\'s your name?'
-  name = gets
-  puts 'Your name is ' + name.chomp! + '? What a lovely name!'
-  puts 'Pleased to meet you, ' + name + '. :)'
+puts 'Hello there, and what\'s your name?'
+name = gets
+puts 'Your name is ' + name.chomp! + '? What a lovely name!'
+puts 'Pleased to meet you, ' + name + '. :)'
   </code></pre>
   <p class="fragment">Run your program from the command line:</p>
   <pre><code class="fragment">
-  ruby name.rb
+ruby name.rb
   </code></pre>
 </section>
 <section>
@@ -439,8 +429,8 @@
     <li>Write your own program using 'puts' and 'gets' to ask a user for their age and then tell them how old they are in dog years.</li>
     <li>reminder: 'gets' method returns a string. To do math on it, convert it to an integer with .to_i method.</li>
     <pre><code class="ruby">
-    # 1 dog year = 7 human years
-    user_age = gets.to_i
+# 1 dog year = 7 human years
+user_age = gets.to_i
     </code></pre>
   </ul>
 </section>
@@ -450,7 +440,7 @@
     <li>Update your code to return a message in all capital letters.</li>
   </ul>
   <pre><code class="ruby">
-  # YOU ARE 5 YEARS OLD IN DOG YEARS
+# YOU ARE 5 YEARS OLD IN DOG YEARS
   </code></pre>
 </section>
 <section>
@@ -459,7 +449,7 @@
     <li>Update your code to return a message in all capital letters with a count of the characters returned in parens.</li>
   </ul>
   <pre><code class="ruby">
-  # YOU ARE 5 YEARS OLD IN DOG YEARS (32 characters)
+# YOU ARE 5 YEARS OLD IN DOG YEARS (32 characters)
   </code></pre>
 </section>
 <section>
