@@ -8,6 +8,6 @@ input = gets.chomp!.downcase
 if animals.include?(input)
   puts "There are #{animals[input]} #{input} at the zoo."
 else
-  puts "There are no #{input} at the zoo."
+  puts "#{input} not found."
 end
 
