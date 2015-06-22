@@ -221,7 +221,7 @@ def greet(greeting, *names)
   end
 end
 
->> greet("Hello", "Alice", "Bob", "Charlie")
+greet("Hello", "Alice", "Bob", "Charlie")
 Hello, Alice!
 Hello, Bob!
 Hello, Charlie!
@@ -235,10 +235,10 @@ def eat(food = "chicken")
   puts "Yum, #{food}!"
 end
 
->> eat
+eat()
 Yum, chicken!
 
->> eat "arugula"
+eat("arugula")
 Yum, arugula!
           </code></pre>
         </section>
