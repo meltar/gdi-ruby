@@ -146,7 +146,7 @@ b = String.new
 b = "holy cow!"
 b.methods
                     </code></pre>
-                    <p>You can view all the built in classes and their associated methods in the <a href="http://www.ruby-doc.org/core-2.0.0/" alt="Ruby docuemntation">Ruby documentation</a>.</p> 
+                    <p class="fragment">You can view all the built in classes and their associated methods in the <a href="http://www.ruby-doc.org/core-2.0.0/" alt="Ruby docuemntation">Ruby documentation</a>.</p> 
                 </section>
 
                 <section>
@@ -159,14 +159,16 @@ class String
   end 
 end 
                     </code></pre>
-                    <p>"self" refers to the object calling the method.</p> 
-                    <p>You can redefine existing methods for classes this way, too, but it's not recommended.</p>
+                    <p class="fragment">"self" refers to the object calling the method.</p> 
+                    <p class="fragment">You can redefine existing methods for classes this way, too, but it's not recommended.</p>
                 </section>
 
       <!-- Creating a class: 20 minutes -->
                 <section>
                     <h3>Creating a Class</h3>
                     <p>It's very easy to create your own classes in Ruby.</p>
+                    <br />
+                    <p> Make a file called die.rb
                     <pre><code contenteditable class="ruby">
 # die.rb                    
 class Die
@@ -187,14 +189,16 @@ end
                 <section>
                 <h3>Creating a Class</h3>
                 <p>You can use your class right away by loading it into IRB.</p>
-                <pre><code>
+                <br />
+                <p class="fragment">Remember to start IRB in the same directory as your file.</p>
+                <pre class="fragment"><code class="ruby">
 #in irb
 load 'die.rb'
 die = Die.new
 die.roll
 puts die.showing
                 </code></pre>
-                <p>You can use it in another file by requiring it. We'll discuss this later.</p>               
+                <p class="fragment">You can use it in another file by requiring it. We'll discuss this later.</p>               
                 <!-- pause here til everyone's got this working -->
                 </section>
                 <section>
