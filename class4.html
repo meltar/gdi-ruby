@@ -299,13 +299,13 @@ me.adventure
                 <section>
                     <h3>Inheritance</h3>
                     <p>Classes can <strong>inherit</strong> from one other class.</p>
-                    <p>All elves are characters, so if all characters have an adventure method, so do all elves. Elves may also have their own methods that other characters do not.</p>
+                    <p class="fragment">All elves are characters, so if all characters have an adventure method, so do all elves. Elves may also have their own methods that other characters do not.</p>
                     </section>
 
                     <section>
                     <h3>Inheritance</h3>
                     <p>Denote that Elf inherits from Character by using the &lt symbol</p>
-                    <pre><code class="ruby">
+                    <pre class="fragment"><code class="ruby">
 # in character.rb, after Character class code
 class Elf < Character
   def twinkle
@@ -315,7 +315,7 @@ end
 
 #in irb
 load 'character.rb'
-me = Elf.new("Cheri")
+me = Elf.new("Melissa")
 me.adventure
 me.twinkle 
                     </code></pre>
@@ -326,7 +326,7 @@ me.twinkle
                     <h3>Inheritance</h3>
                     <p><strong>Subclasses</strong> may differ from from their <strong>super classes</strong> in some ways. Methods can be overwritten when this is the case.</p>
 
-                    <pre><code contenteditable class="ruby">
+                    <pre class="fragment"><code contenteditable class="ruby">
 # in character.rb, after Character class code
 class Elf < Character
   def twinkle
@@ -343,7 +343,7 @@ load 'character.rb'
 me = Elf.new("Cheri")
 me.heal
                     </code></pre>
-                    <p>More information about inheritance can be found <a href="http://rubylearning.com/satishtalim/ruby_inheritance.html" alt="rubylearning.com">here</a>.</p>
+                    <p class="fragment">More information about inheritance can be found <a href="http://rubylearning.com/satishtalim/ruby_inheritance.html" alt="rubylearning.com">here</a>.</p>
                 </section>
 
                 <section>
