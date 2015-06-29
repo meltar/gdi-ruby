@@ -202,19 +202,39 @@ puts die.showing
                 <!-- pause here til everyone's got this working -->
                 </section>
                 <section>
-                    <h3>Refactoring a Class</h3>
+                    <h3>Improving a Class</h3>
                     <p>What is the result of calling the .showing method on a newly-created, un-rolled Die object?</p>
-                    <p>We can avoid this by calling the roll method as part of the creation of a new instance of Die.</p>
-                    <pre><code class="ruby">
+                    <pre><code contenteditable class="ruby">
+# die.rb                    
+class Die
+  
+  def roll 
+    @numberShowing = 1 + rand(6) 
+    #rand(6) returns a random-ish number between 0-5
+  end 
+
+  def showing 
+    return @numberShowing
+  end 
+
+end 
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Improving a Class</h3>
+                    <p>What is the result of calling the .showing method on a newly-created, un-rolled Die object?</p>
+                    <p class="fragment">We can avoid this by calling the roll method as part of the creation of a new instance of Die.</p>
+                    <pre class="fragment"><code class="ruby">
 # die.rb
 class Die
   
+  # new initialize method
   def initialize 
     roll
   end 
 
   def roll 
-     @numberShowing = 1 + rand(6) 
+    @numberShowing = 1 + rand(6) 
   end 
 
   def showing 
