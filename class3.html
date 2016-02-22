@@ -103,18 +103,136 @@ end
             <li class="fragment">Ranges - (0..10)</li>
             <li class="fragment">Arrays - [1,2,3]</li>
             <li class="fragment">Hashes - {"one" => 1, "two" => 2}</li>
-            <li class="fragment">Enumerable methods - .each()</li>
           </ul>
         </section>
 
         <section>
           <h3>What we will cover today</h3>
           <ul>
+            <li class="fragment">Enumerable Methods on Collections- .each()</li>
             <li class="fragment">Methods</li>
             <li class="fragment">Objects</li>
             <li class="fragment">Object Oriented Programming</li>
           </ul>
         </section>
+				<section>
+            <h3>Enumerable</h3>
+            <p><strong>Arrays</strong> and <strong>Hashes</strong> are both classes that have <strong>Enumerable</strong> methods. There are a lot of cool methods available for Enumerable, including <strong>each</strong>. </p>
+
+            <!-- <p>Learn more about the methods available to Enumerable <a href="http://www.ruby-doc.org/core-2.1.1/Enumerable.html" alt="Ruby Docs">here</a>.</p> -->
+            </section>
+
+            <section>
+            <h3>.each with Ranges</h3>
+            <p>This is the simplest!</p>
+            <pre><code class="ruby">
+(3..8).each do |number|
+  puts number * 4
+end
+            </code></pre>
+            </section>
+
+            <section>
+            <h3>.each with Arrays</h3>
+            <p>Can be simple or more complex, depending on the array.</p>
+            <pre><code class="ruby">
+pets_array = ["dog", "cat", "turtle", "parakeet", "ferret"]
+
+pets_array.each do |pet|
+  puts "I like #{pet}s!!"
+end
+
+
+deep_array = [["mountain", "desert"], ["ocean", "sky"]]
+
+deep_array.each do |array|
+  puts "I like #{array.first}s!!"  # each element is also an array
+end
+            </code></pre>
+            </section>
+
+            <section>
+            <h3>.each with Hashes</h3>
+            <p>Each element has a key and value that needs to be used.</p>
+            <pre><code class="ruby">
+grades_hash = { "Jane Doe" => 10, "Jim Doe" => 6, "Jan Doe" => 8}
+
+grades_hash.each do |key, value|
+  puts "#{key}'s grade is #{value}"
+end 
+            </code></pre>
+            </section>
+
+            <!-- Let's develop it: 10 minutes -->
+            <section>
+                <h3>Let's Develop It</h3>
+               
+            <p>Write a program called 'divisible.rb' that prints out every number between 1 and 1000 that is divisible by 7.</p>
+            <br />
+            <p>Make a new ruby file called divisible.rb</p>
+            <br />
+            <p>Hint: the modulo operator, %, will be helpful.</p>
+            <p>Write out your program in prose, then translate each line into Ruby</p>
+            <pre><code class="ruby">
+# try these expressions in IRB
+9 / 2
+9 % 2
+            </code></pre>
+            </section>
+
+<!-- we found that there wasn't enough time in this class for this content, but it may be useful as homework or additional material for advanced students.
+
+            <section>
+                <h3>Enumerable</h3>
+                <p>Visit <a href="https://gist.github.com/cherimarie/11004115" alt="Gist with pets array">this page</a> and copy the contents of the Gist to a local file. Save it as pets.rb. We'll work with it together in IRB.</p>
+            </section>
+
+            <section>
+                <h3>Enumerable: Reduce</h3>
+                <p>Returns the product of running the operator on all elements of the enumerable.</p>
+                <pre><code class="ruby">
+(1..4).reduce(:*)   # returns 1 * 2 * 3 * 4
+(1...5).reduce(:+)  # returns 1 + 2 + 3 + 4
+(2...5).reduce(:**) # returns 2 ** 3 ** 4
+                </code></pre>
+            </section>
+
+            <section>
+                <h3>Enumerable: Collect and Map</h3>
+                <p>Returns an array with the results of running the block on each element. Can be used interchangably.</p>
+                <pre><code class="ruby">
+$pets.collect{|p| p[:name]}      # returns array of all pet names
+$pets.collect{|p| p[:legs]}.reduce(:+) # returns sum of all pet legs
+
+                </code></pre>
+            </section>
+
+            <section>
+                <h3>Enumerable: Reject</h3>
+                <p>Returns an array with all elements that did not meet the critera in code block.</p>
+                <pre><code class="ruby">
+$pets.reject{|p| p[:talents].include? "napping" }  
+      # returns array of pets whose talents do not include napping    
+
+                </code></pre>
+            </section>
+
+            <section>
+              <h3>Let's Develop It</h3>
+              <p>How many of our pets are nocturnal?</p>
+
+            </section>
+
+              <section>
+              <h3>Let's Develop It- Sample Code</h3>
+              <p>How many of our pets are nocturnal?</p>
+              <pre><code class="ruby">
+$pets.reject{|p| p[:nocturnal]== false}.count
+
+                </code></pre>
+
+            </section> -->
+
 
         <section>
           <h3>Methods</h3>
@@ -425,23 +543,12 @@ my_string.upcase
         </section>
 
         <section>
-          <h3>OOP & Polymorphism</h3>
-          <p>Similar to inherited traits and behaviors, there are also polymorphic traits and behaviors.</p>
-          <p class="fragment"><strong>Polymorphic</strong> means many forms.</p>
-          <br />
-          <p class="fragment">Within OOP, this relates to different objects being able to respond to the same message in different ways.</p>
-          <pre><code contenteditable class="fragment ruby">
-[1, "abc"].each {|object| puts object.next}
-          </code></pre>
-        </section>
-
-        <section>
           <h3>Questions?</h3>
         </section>
 
         <section>
           <h3>Homework</h3>
-          <p><strong>Practice:</strong> Do some of the exercises at the end of <a href="http://pine.fm/LearnToProgram/?Chapter=08" alt="Chp 8 of Learn to Program">Chapter 8</a> of Learn to Program.</p>
+          <p><strong>Practice:</strong> Starting with the first "English Number" excercise, do the exercises at the end of <a href="http://pine.fm/LearnToProgram/?Chapter=08" alt="Chp 8 of Learn to Program">Chapter 8</a> of Learn to Program.</p>
           <p><strong>Prep:</strong> Read <a href="http://pine.fm/LearnToProgram/?Chapter=09" alt="Chp 9 of Learn to Program">Chapter 9</a> of Learn To Program- don't try to do the exercises at the end yet, though.</p>
         </section>
       </div>
