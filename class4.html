@@ -246,7 +246,7 @@ end
                 <section>
                     <h3>Let's Develop It</h3>
                     <ul>
-                        <li>In your text editor, create a "Character" class with an initialize method that sets the Character's name, and at least one other method.</li>
+                        <li>In your text editor, create a "Animal" class with an initialize method that sets the Animal's name, and at least one other method.</li>
                         <li>Open IRB and load the class. Create one or more objects from the class and run some methods on them.</li>
                         <li>You could use the next slides as an example.</li>
                     </ul>
@@ -255,25 +255,25 @@ end
                 <section>
                 <h3>Example code</h3>
                     <pre><code contenteditable class="ruby">
-# in character.rb
-class Character 
+# in animal.rb
+class animal 
 
   def initialize(name)
     @name = name
-    @health = 10
+    @color = "blue"
   end
 
-  def heal
-    @health += 6
+  def change_color
+    @color = "red"
   end 
 
-  def adventure
-    if @health > 0
-      puts "#{@name} goes on a great adventure and meets a dragon!"
-      puts "The dragon hugged #{@name} kind of hard..."
-      @health -= 5
+  def romp
+    if @color == "red"
+      puts "#{@name} loves running around and playing"
+      puts "#{@name} is getting tired..."
+      @color = "blue"
     else 
-      puts "#{@name} is dead :("
+      puts "#{@name} is too sad or tired to romp right now :("
       exit
     end
   end
@@ -285,11 +285,11 @@ end
                 <h3>Running example program in IRB</h3>
                     <pre><code contenteditable class="ruby">
 # in irb
-load 'character.rb'
-me = Character.new("Kylie")
-me.adventure
-me.heal 
-me.adventure
+load 'animal.rb'
+scout = Animal.new("Scout")
+scout.romp
+scout.change_color 
+scout.romp
 # repeat until you're done having fun
 
                     </code></pre>
@@ -299,27 +299,27 @@ me.adventure
                 <section>
                     <h3>Inheritance</h3>
                     <p>Classes can <strong>inherit</strong> from one other class.</p>
-                    <p class="fragment">All elves are characters, so if all characters have an adventure method, so do all elves. Elves may also have their own methods that other characters do not.</p>
+                    <p class="fragment">All cats are animals, so if all animals have an romp method, so do all cats. cats may also have their own methods that other animals do not.</p>
                     </section>
 
                     <section>
                     <h3>Inheritance</h3>
-                    <p>Denote that Elf inherits from Character by using the &lt symbol</p>
+                    <p>Denote that Cat inherits from animal by using the &lt symbol</p>
                     <pre class="fragment"><code class="ruby">
-# in character.rb, after Character class code
-class Elf < Character
-  def twinkle
-    puts "I'm super magical!"
+# in animal.rb, after animal class code
+class Cat < Animal
+  def speak
+    puts "I love biting!"
   end 
 end
 
 #in irb
-load 'character.rb'
-me = Elf.new("Kylie")
-me.adventure
-me.twinkle 
+load 'animal.rb'
+scout = Cat.new("Scout")
+scout.romp
+scout.change_color 
                     </code></pre>
-                    <p class="fragment">Notice that the initialize method was also inherited, as our new Elf knows its name and started off with 10 health.</p>
+                    <p class="fragment">Notice that the initialize method was also inherited, as our new Cat knows its name and started off with red color.</p>
                 </section>
 
                 <section>
@@ -327,21 +327,21 @@ me.twinkle
                     <p><strong>Subclasses</strong> may differ from from their <strong>super classes</strong> in some ways. Methods can be overwritten when this is the case.</p>
 
                     <pre class="fragment"><code contenteditable class="ruby">
-# in character.rb, after Character class code
-class Elf < Character
-  def twinkle
-    puts "I'm super magical!"
+# in animal.rb, after animal class code
+class Cat < Animal
+  def speak
+    puts "I love biting!"
   end
 
-  def heal
-    @health += 8 # it's easier to heal when you're magical
+  def change_color
+    @color = "purple" # nothing cats do makes any sense
   end 
 end
 
 #in irb
-load 'character.rb'
-me = Elf.new("Cheri")
-me.heal
+load 'animal.rb'
+scout = Cat.new("Scout")
+scout.change_color
                     </code></pre>
                     <p class="fragment">More information about inheritance can be found <a href="http://rubylearning.com/satishtalim/ruby_inheritance.html" alt="rubylearning.com">here</a>.</p>
                 </section>
@@ -357,15 +357,15 @@ me.heal
                     </section>
                     <section>
                     <h3>Putting it all together</h3>
-                    <p>The file containing your class definitions, here called character.rb: </p>
+                    <p>The file containing your class definitions, here called animal.rb: </p>
                     <pre><code contenteditable class="ruby">
-# character.rb
+# animal.rb
 
-class Character
+class Animal
   # contents of class here 
 end
 
-class Elf < Character
+class Cat < Animal
   # contents of class here 
 end
                     </code></pre>
@@ -373,18 +373,17 @@ end
 
                      <section>
                     <h3>Putting it all together</h3>
-                    <p>The file containing your program, here called adventure.rb, which will run from the command line and requires the class file: </p>
+                    <p>The file containing your program, here called digital_pet_game.rb, which will run from the command line and requires the class file: </p>
                     <pre><code contenteditable class="ruby">
-# adventure.rb
+# digital_pet_game.rb
 
-require_relative 'character.rb' 
-  #file path relative to the location of adventure.rb file
+require_relative 'animal.rb' 
+  #file path relative to the location of digital_pet_game.rb file
 require_relative 'die.rb'
 
 
 puts "Your name?"
-char = Character.new(gets.chomp)
-# plus lots more adventuring..... 
+char = Animal.new(gets.chomp)
                     </code></pre>
                     </section>
                     <section>
@@ -392,7 +391,7 @@ char = Character.new(gets.chomp)
                     <p>Call the program file from the command line: </p>
                     <pre><code contenteditable class="ruby">
 #in command line
-ruby adventure.rb
+ruby digital_pet_game.rb
 # then have some fun!
                     </code></pre>
                 </section>
@@ -400,15 +399,23 @@ ruby adventure.rb
               <!-- Let's develop it: 40 minutes -->
                 <section>
                     <h3>Let's Develop It</h3>
-                    <p>Putting it all together: A role-playing game!</p>
+                    <p>Putting it all together: A digital pet game!</p>
                     <ul>
-                        <li>If you didn't write a Character class, copy and paste the code to get one started.</li>
-                        <li>Create a few subclasses of Character.</li>
-                        <li>Write a command-line program that calls your character and die classes to allow the user to have an adventure!</li>
-                        <li>Maybe user can choose their character type?</li>
-                        <li>Maybe the user's progress will be dependent on outcome of dice-rolling?</li>
+                        <li>If you didn't write a Animal class, copy and paste the code to get one started.</li>
+                        <li>Create a few subclasses of Animal.</li>
+                        <li>Write a command-line program that calls your Animal subclasses to allow the user to have a digital pet!</li>
+                        <li>Maybe user can choose their Animal type?</li>
                     </ul>
                 </section>
+
+                <section>
+                    <h3>Bonus: Let's Develop It</h3>
+                    <p>Putting it all together: A role-playing game!</p>
+                    <ul>
+                        <li>Maybe the user's animal's behavior will be dependent on outcome of dice-rolling?</li>
+                    </ul>
+                </section>
+
 
                 <section>
                     <h3>Questions?</h3>
