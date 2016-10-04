@@ -14,7 +14,7 @@ This class has been updated for the Atlanta GDI chapter by Melissa Holmes.
 
 Installfest & Intro to Command Line
 
-Get your developement environment set up on your machine. Install Ruby, Rails, and Git, with the assistance of some helpful volunteers. We'll also have a brief lecture on working with the command line.
+Get your development environment set up on your machine. Install Ruby, Rails, and Git, with the assistance of some helpful volunteers. We'll also have a brief lecture on working with the command line.
 
 ### Class 1
 
@@ -47,6 +47,6 @@ Ready to start programming? Want to learn one language that you can use to build
 
 Ruby is an open source language that powers applications and products like Hulu, LivingSocial, Groupon, and Github. There is a thriving, friendly community of users, and the job market for developers is strong.
 
-Through this five course series, you'll get a throrough introduction to programming fundamentals with Ruby. We'll use the Interactive RuBy shell; write command line programs that use loops, conditionals, methods, and classes; and learn the basics of object oriented programming. We'll mix lecture and practice, and help guide you through the coursework. 
+Through this five course series, you'll get a thorough introduction to programming fundamentals with Ruby. We'll use the Interactive Ruby shell; write command line programs that use loops, conditionals, methods, and classes; and learn the basics of object oriented programming. We'll mix lecture and practice, and help guide you through the coursework.
 
 We'll spend part of the first class meeting setting up your development environment, so there's no need to install software ahead of time. Just bring your laptop and be prepared to start coding! 
