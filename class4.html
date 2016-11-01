@@ -286,10 +286,10 @@ end
                     <pre><code contenteditable class="ruby">
 # in irb
 load 'animal.rb'
-scout = Animal.new("Scout")
-scout.romp
-scout.change_color 
-scout.romp
+mittens = Animal.new("Mittens")
+mittens.romp
+mittens.change_color
+mittens.romp
 # repeat until you're done having fun
 
                     </code></pre>
@@ -309,15 +309,15 @@ scout.romp
 # in animal.rb, after animal class code
 class Cat < Animal
   def speak
-    puts "I love biting!"
+    puts "Meow!"
   end 
 end
 
 #in irb
 load 'animal.rb'
-scout = Cat.new("Scout")
-scout.romp
-scout.change_color 
+mittens = Cat.new("Mittens")
+mittens.romp
+mittens.change_color
                     </code></pre>
                     <p class="fragment">Notice that the initialize method was also inherited, as our new Cat knows its name and started off with red color.</p>
                 </section>
@@ -330,7 +330,7 @@ scout.change_color
 # in animal.rb, after animal class code
 class Cat < Animal
   def speak
-    puts "I love biting!"
+    puts "Meow!"
   end
 
   def change_color
@@ -340,8 +340,8 @@ end
 
 #in irb
 load 'animal.rb'
-scout = Cat.new("Scout")
-scout.change_color
+mittens = Cat.new("Mittens")
+mittens.change_color
                     </code></pre>
                     <p class="fragment">More information about inheritance can be found <a href="http://rubylearning.com/satishtalim/ruby_inheritance.html" alt="rubylearning.com">here</a>.</p>
                 </section>
@@ -417,7 +417,7 @@ ruby digital_pet_game.rb
                 </section>
 
                 <section>
-                    <h3>thrilling survey time</h3>
+                    <h3>Survey time!</h3>
                     <a href="http://goo.gl/forms/rUIuXN3bY2"> link to survey</a>
                 </section>
 
